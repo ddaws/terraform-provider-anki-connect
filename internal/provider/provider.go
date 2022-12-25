@@ -24,21 +24,24 @@ type ScaffoldingProvider struct {
 
 // ScaffoldingProviderModel describes the provider data model.
 type ScaffoldingProviderModel struct {
-	Endpoint types.String `tfsdk:"endpoint"`
+	Address types.String `tfsdk:"address"`
 }
 
 func (p *ScaffoldingProvider) Metadata(ctx context.Context, req provider.MetadataRequest, resp *provider.MetadataResponse) {
-	resp.TypeName = "scaffolding"
+	resp.TypeName = "anki"
 	resp.Version = p.version
 }
 
 func (p *ScaffoldingProvider) Schema(ctx context.Context, req provider.SchemaRequest, resp *provider.SchemaResponse) {
 	resp.Schema = schema.Schema{
 		Attributes: map[string]schema.Attribute{
-			"endpoint": schema.StringAttribute{
-				MarkdownDescription: "Example provider attribute",
+			"address": schema.StringAttribute{
+				MarkdownDescription: "The Anki Connect address",
 				Optional:            true,
 			},
+			"port": schema.Int64Attribute{
+				Description: "The Anki Connect port",
+			}
 		},
 	}
 }
