@@ -25,6 +25,7 @@ type ScaffoldingProvider struct {
 // ScaffoldingProviderModel describes the provider data model.
 type ScaffoldingProviderModel struct {
 	Address types.String `tfsdk:"address"`
+	Port types.Int64 `tfsdk:"port"`
 }
 
 func (p *ScaffoldingProvider) Metadata(ctx context.Context, req provider.MetadataRequest, resp *provider.MetadataResponse) {
