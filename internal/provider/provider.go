@@ -41,7 +41,7 @@ func (p *ScaffoldingProvider) Schema(ctx context.Context, req provider.SchemaReq
 			},
 			"port": schema.Int64Attribute{
 				Description: "The Anki Connect port",
-			}
+			},
 		},
 	}
 }

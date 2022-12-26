@@ -1,4 +1,4 @@
-module github.com/hashicorp/terraform-provider-scaffolding-framework
+module github.com/ddaws/terraform-provider-anki-connect
 
 go 1.18
 
